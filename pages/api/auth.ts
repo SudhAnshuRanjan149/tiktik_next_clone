@@ -13,8 +13,6 @@ export default async function handler(
 
 	const user = req.body;
 
-	client.createIfNotExists(user).then(() => res)
-
-    res.status(200).json(data);
+	client.createIfNotExists(user).then(() => res.status(200).json('Login Success'))
   }
 }
